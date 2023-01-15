@@ -110,9 +110,7 @@ python 3.7
 - 한국 의약품 OCR 인식 : [https://cvml.tistory.com/18](https://cvml.tistory.com/18)
 - 티켓 OCR 분석 : [https://velog.io/@hyunk-go/크롤링-Tesseract-OCR-EasyOCR-OpenCV-그리고-학습](https://velog.io/@hyunk-go/%ED%81%AC%EB%A1%A4%EB%A7%81-Tesseract-OCR-EasyOCR-OpenCV-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%ED%95%99%EC%8A%B5)
 - OCR 최신 동향 : [https://yongwookha.github.io/MachineLearning/2022-02-08-current-ocrs](https://yongwookha.github.io/MachineLearning/2022-02-08-current-ocrs)
-- bertsum 한국어 :
-    
-    [https://velog.io/@raqoon886/KorBertSum-SummaryBot](https://velog.io/@raqoon886/KorBertSum-SummaryBot)
+- bertsum 한국어 :[https://velog.io/@raqoon886/KorBertSum-SummaryBot](https://velog.io/@raqoon886/KorBertSum-SummaryBot)
     
 
 ## 챌린지
@@ -125,13 +123,10 @@ python 3.7
 
 - conda env list : 가상환경
 - 맥os python3.6 설치 :
-    
     [https://stackoverflow.com/questions/70205633/cannot-install-python-3-7-on-osx-arm64](https://stackoverflow.com/questions/70205633/cannot-install-python-3-7-on-osx-arm64)
     
 - jupyter notebook kernel 추가
-    
     pip install ipykernel 
-    
     python -m ipykernel install --user --name 가상환경 이름 --display-name 커널 이름
     
 
@@ -143,18 +138,15 @@ python 3.7
         - training code가 공개되지 않아서, fine tuning을 할 수도 없음 → 프로젝트에 딥러닝 포인트가 없을듯.
         - 만약 이걸로 하면, 바운딩 박스를 클러스터링해서 image recognition 을 하면 문제는 txt를 잘 뽑아 낼 수는 있을 듯.
         - [Error] OSError: image file is truncated : 사이즈 조절 필요함.
-            
-            [Craft 결과](https://www.notion.so/Craft-ef55f6352f4b48cbb64efe1e73a84411)
+          
             
     2. tessact OCR 
         
         [EasyOCR 사용자 모델 학습하기 (1) - 시작하기 전에](https://davelogs.tistory.com/76)
-        
         이 사람 블로그 많이 참고함.
-        
         - 결과 : craft 보다는 상당히 구리지만, 그만큼 학습의 여지가 많이 남아있음. 학습과정도 뒤에 설명되있어서 이걸로 하면 좋을듯
         
-        ![Untitled](%E1%84%83%E1%85%B5%E1%86%B8%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20167b04eba1464a9da95f0f099b6bf9e0/Untitled.png)
+        ![Untitled](README/Untitled.png)
         
         - tesseract에서 앞으로 해야 할 일
             1. 파이썬 코드 없이 C/C++ base인게 문제
@@ -166,20 +158,15 @@ python 3.7
 - 10/14 (금)
     1. Easy_Ocr test
         - 테스트 결과
-            
             [easy ocr 결과](https://www.notion.so/easy-ocr-22c532b5267543a9a756cddcb9072e0f)
-            
         - 꽤 정확한 수치이지만 평범한 글자임에도 아직 완벽하게 읽지는 못하고 있음.
         - 바운딩 박스 정확
     
     1. baseline과 방향 관련
         
         baseline : finetuning 하지 않은 easyocr
-        
         → finetune한 이후 text recognition에서 유의미한 차이 보이기
-        
         → 바운딩 박스 / 볼드체 등으로 분류해서 단락별로 텍스트 처리가 되어 확실한 차이 불러오기
-        
         → 위의 방법 말고, 단락단위 학습을 시켜서 제대로 나오는지도 확인해보고 싶음.
         
     2. 데이터셋은 어떻게 할 것인가.
@@ -194,7 +181,7 @@ python 3.7
             - bounding 박스를 통해, 문단별로 할 수는 있을 듯?
                 - 네이버 CRAFT / EasyOCR로
                 
-                ![Untitled](%E1%84%83%E1%85%B5%E1%86%B8%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20167b04eba1464a9da95f0f099b6bf9e0/Untitled.jpeg)
+                ![Untitled](README/Untitled.jpeg)
                 
                 이 바운딩 박스를 어떻게 조정하.. 참..
                 
@@ -204,13 +191,7 @@ python 3.7
                 2. 헤드라인 /소제목 / 본문 분류 → 세로 길이로 얘는 마지막에 하는게 좋을듯
                 3. 본문 column 분류
                 
-                 
-                
-                1. 이미지나 기사가 아닌 것은 그 밑에 딸린 주석까지 전부 blur 처리해야할 듯
-                2. 
-                
-                headline : 
-                
+               
 - 10/27 (목) : bounding box 코드정리
 - 11/14 (월)
     - 남은 agenda 정리
@@ -224,18 +205,8 @@ python 3.7
         2. 실제 한경 크롤링해서 캡쳐해서 데이터화 하기
             - 규칙 / 알고리즘 화
         3. 학습 모델 정립, 실제 학습하기 , 학습 환경 정하기
-        4. 자연어처리 모델 학습하기 (80프로 와
-            
-            [https://younghwani.github.io/posts/kobart-summary-3/](https://younghwani.github.io/posts/kobart-summary-3/)
-            
-        5. 
-        
-- 11/27 (일)
-    - Kobart를 이용한 자연어처리 모델 학습
-    
-    [[NLP] KoBART 요약 실행해보기(3/3)](https://younghwani.github.io/posts/kobart-summary-3/)
-    
-    - easyocr 해보기
+
+
 - 11/28(월)
     
     일단 easyOCR 한사이클 완료
@@ -253,19 +224,6 @@ python 3.7
     2) 바운딩박스를 유지한채 한문장~한문단이 있는 데이터 → 안귀찮으면 할 수 있을듯.
     
     원래 DTRB
-    
-- 11/29(화)
-    
-    하시발 자꾸 한글 데이터가 학습이 안됨.
-    
-    → 한글자 단위말고,  AI hub데이터로 여러글자 단위로 한번 해보기. 오늘 이거 마무리하고 DTRB 학습돌려놓고 자야함.
-    
-    ```
-    python3 create_lmdb_dataset.py \
-            --inputPath ../data/raw/train/ \
-            --gtFile ../data/raw/train/gt.txt \
-            --outputPath ../data/lmdb/train/
-    ```
     
 - 11/30 (수)
     1. 첫 번째 학습 완성, 결과는 개망.
@@ -285,7 +243,7 @@ python 3.7
 ## 학습 0 : pretrained-g2 /
 
 - 학습 결과
-    
+    '''
     [1/300000] Train loss: 11.57690, Valid loss: 6.35848, Elapsed_time: 1.97204
     Current_accuracy : 10.000, Current_norm_ED  : 0.00
     Best_accuracy    : 10.000, Best_norm_ED     : 0.00
@@ -298,7 +256,7 @@ python 3.7
                               | 월                         | 0.6674	False
                               |                           | 0.5773	True
     --------------------------------------------------------------------------------
- 
+    '''
    
 - 한 글자 단위 학습
 - 랜덤 생성된 한글자가 class로 분류하기에는 적절하지 않음
