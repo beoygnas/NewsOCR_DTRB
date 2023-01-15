@@ -18,7 +18,7 @@ KoBART-summarization 을 AI  hub로 fine tuning
 
 3차 목표 : 갤러리 접근 / 요약기능을 하는 애플리케이션 만들기
 
-![IMG_100088CC288A-1.jpeg](%E1%84%83%E1%85%B5%E1%86%B8%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%/IMG_100088CC288A-1.jpeg)
+![IMG_100088CC288A-1.jpeg](README/IMG_100088CC288A-1.jpeg)
 
 ## proposal
 
