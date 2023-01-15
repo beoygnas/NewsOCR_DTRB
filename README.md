@@ -243,7 +243,7 @@ python 3.7
 ## 학습 0 : pretrained-g2 /
 
 - 학습 결과
-    '''
+    ```
     [1/300000] Train loss: 11.57690, Valid loss: 6.35848, Elapsed_time: 1.97204
     Current_accuracy : 10.000, Current_norm_ED  : 0.00
     Best_accuracy    : 10.000, Best_norm_ED     : 0.00
@@ -256,7 +256,7 @@ python 3.7
                               | 월                         | 0.6674	False
                               |                           | 0.5773	True
     --------------------------------------------------------------------------------
-    '''
+    ```
    
 - 한 글자 단위 학습
 - 랜덤 생성된 한글자가 class로 분류하기에는 적절하지 않음
