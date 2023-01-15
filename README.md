@@ -1,4 +1,13 @@
-# 딥러닝 프로젝트
+# NewsOCR : 한글신문기사 OCR모델 구현
+
+## [FinalProjectReport_김상엽.pdf](https://github.com/beoygnas/NewsOCR_DTRB/files/10419389/FinalProjectReport_.pdf)
+
+naver에서 제공하는 clovaOCR => 제목 / 문단의 구분없이 
+![clovaocr](https://user-images.githubusercontent.com/90368392/212521512-132900e5-2152-4222-8918-cef0abc06d68.png)
+
+NewsOCR : 제목 / column 구분으로 사람이 읽을 수 있는 형태의 OCR결과 제공
+![NewsOCR](https://user-images.githubusercontent.com/90368392/212521519-71a3114e-699a-41a8-90ac-e30f80bd5b22.jpg)
+
 
 ## idea
 
