@@ -1,8 +1,8 @@
 # NewsOCR : 한글신문기사 OCR모델 구현
 
-### [FinalProjectReport_김상엽.pdf](https://github.com/beoygnas/NewsOCR_DTRB/files/10419389/FinalProjectReport_.pdf)
+#### [FinalProjectReport_김상엽.pdf](https://github.com/beoygnas/NewsOCR_DTRB/files/10419389/FinalProjectReport_.pdf)
 
-### naver에서 제공하는 clovaOCR => 제목 / 문단의 구분없이 
+### naver에서 제공하는 clovaOCR => 제목 / 문단의 구분없이 의미없는 텍스트 나열
 ![clovaocr](https://user-images.githubusercontent.com/90368392/212521512-132900e5-2152-4222-8918-cef0abc06d68.png)
 
 ### NewsOCR : 제목 / column 구분으로 사람이 읽을 수 있는 형태의 OCR결과 제공
